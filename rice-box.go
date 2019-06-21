@@ -11,15 +11,15 @@ func init() {
 	// define files
 	file2 := &embedded.EmbeddedFile{
 		Filename:    "app.js",
-		FileModTime: time.Unix(1561074091, 0),
+		FileModTime: time.Unix(1561074732, 0),
 
-		Content: string("document.getElementById(\"text\").innerHTML = \"Hello World<br /><p>Created by Nic Raboy</p>\""),
+		Content: string("document.getElementById(\"text\").innerHTML = \"Hello World<br /><p>Created by Xavier Olivares</p>\""),
 	}
 	file3 := &embedded.EmbeddedFile{
 		Filename:    "custom.css",
-		FileModTime: time.Unix(1561073998, 0),
+		FileModTime: time.Unix(1561075032, 0),
 
-		Content: string(".container {\n    width: 400px;\n    height: 100px;\n    background-color: #009ACD;\n    margin: auto;\n}\n\n.text {\n    position: relative;\n    top: 50%;\n    transform: translateY(-50%);\n    text-align: center;\n    color: #FFFFFF;\n}"),
+		Content: string(".container {\n    width: 400px;\n    height: 100px;\n    background-color: #009ACD;\n    margin: auto;\n}\n\n.text {\n    position: relative;\n    top: 50%;\n    transform: translateY(-50%);\n    text-align: center;\n    color: #FFFFFF;\n}\n\nhtml {\n    background-color: black\n}"),
 	}
 	file4 := &embedded.EmbeddedFile{
 		Filename:    "index.html",
@@ -31,7 +31,7 @@ func init() {
 	// define dirs
 	dir1 := &embedded.EmbeddedDir{
 		Filename:   "",
-		DirModTime: time.Unix(1561073822, 0),
+		DirModTime: time.Unix(1561075032, 0),
 		ChildFiles: []*embedded.EmbeddedFile{
 			file2, // "app.js"
 			file3, // "custom.css"
@@ -46,7 +46,7 @@ func init() {
 	// register embeddedBox
 	embedded.RegisterEmbeddedBox(`website`, &embedded.EmbeddedBox{
 		Name: `website`,
-		Time: time.Unix(1561073822, 0),
+		Time: time.Unix(1561075032, 0),
 		Dirs: map[string]*embedded.EmbeddedDir{
 			"": dir1,
 		},
