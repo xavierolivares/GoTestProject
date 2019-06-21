@@ -4,6 +4,7 @@ To bundle the assets we need to use a separate application
 export PATH=$PATH:$GOPATH/bin
 
 If there are any changes to your files, rebundle:
+export PATH=$PATH:$GOPATH/bin
 rice embed-go
 
 The above command will create a file called rice-box.go in your project.
